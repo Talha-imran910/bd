@@ -1,0 +1,18 @@
+- generic [ref=e9]:
+  - generic [ref=e10]:
+    - heading "Hi DUMBOO :)" [level=1] [ref=e11]
+    - paragraph [ref=e12]: I made something small, just for you.
+  - paragraph [ref=e15]: Okay, now come back and tell me if you liked it.
+  - button "Open the hidden letter" [ref=e16] [cursor=pointer]
+  - generic [ref=e17]:
+    - paragraph [ref=e18]: Secret buttons
+    - generic [ref=e19]:
+      - button "Memory" [ref=e20] [cursor=pointer]
+      - button "Sparkle" [ref=e21] [cursor=pointer]
+      - button "Finale" [ref=e22] [cursor=pointer]
+    - paragraph [ref=e23]: Try them after opening the letter.
+  - generic [ref=e24]:
+    - button "Click me if you can" [ref=e25] [cursor=pointer]
+    - paragraph [ref=e26]: This one is a little dramatic.
+  - paragraph [ref=e27] [cursor=pointer]: Click here if you want to watch it again.
+  - paragraph: :)

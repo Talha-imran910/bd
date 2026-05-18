@@ -1,0 +1,889 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.song {
+  visibility: hidden;
+}
+
+.start-screen {
+  align-items: center;
+  background: linear-gradient(135deg, #fff7d6 0%, #ffd6e7 48%, #d5f4ff 100%);
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  padding: 24px;
+  position: fixed;
+  text-align: center;
+  z-index: 20;
+}
+
+.start-screen.is-hidden {
+  display: none;
+}
+
+.start-panel {
+  max-width: 520px;
+  width: min(100%, 520px);
+}
+
+.start-kicker {
+  color: #6a5b44;
+  font-size: 1rem;
+  letter-spacing: 0;
+  margin: 0 0 10px;
+}
+
+.start-panel h1 {
+  color: #222;
+  font-family: 'Pacifico', cursive;
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0 0 28px;
+}
+
+.start-panel h1 span {
+  color: #d93c7a;
+}
+
+.start-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.start-actions button,
+.letter-btn {
+  background: #1f8fbf;
+  border: 0;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  min-height: 44px;
+  padding: 12px 18px;
+}
+
+.start-actions .secondary {
+  background: #ffffff;
+  color: #1f5368;
+}
+
+.birthday-nav {
+  display: none;
+  gap: 10px;
+  left: 16px;
+  position: fixed;
+  top: 16px;
+  z-index: 35;
+}
+
+.birthday-nav.is-visible {
+  display: flex;
+}
+
+.birthday-nav button {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(31, 83, 104, 0.18);
+  border-radius: 6px;
+  box-shadow: 0 12px 28px rgba(31, 83, 104, 0.14);
+  color: #1f5368;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  min-height: 40px;
+  padding: 9px 14px;
+}
+
+.birthday-nav button:hover {
+  background: #fff7d6;
+}
+
+.container {
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  visibility: hidden;
+  width: 100vw;
+}
+
+.container > div {
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 20vh;
+}
+
+.one {
+  font-family: 'Pacifico', cursive;
+  font-size: 4.5rem;
+  font-weight: 400;
+}
+
+.two {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.three {
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.four .text-box {
+  border: 3px solid #aaa;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+  width: min(600px, calc(100vw - 32px));
+}
+
+.text-box p {
+  margin: 0;
+  text-align: left;
+}
+
+.text-box span {
+  visibility: hidden;
+}
+
+.text-box .fake-btn {
+  background-color: rgb(21, 161, 237);
+  border-radius: 3px;
+  bottom: -50px;
+  color: #fff;
+  padding: .5rem 1rem;
+  position: absolute;
+  right: 5px;
+}
+
+.fake-cursor {
+  border-bottom: 14px solid transparent;
+  border-left: 18px solid #222;
+  filter: drop-shadow(0 3px 2px rgba(0, 0, 0, 0.25));
+  height: 0;
+  left: 32px;
+  opacity: 0;
+  position: absolute;
+  top: calc(100% + 8px);
+  transform: rotate(-18deg);
+  width: 0;
+  z-index: 4;
+}
+
+.fake-cursor::after {
+  background: #222;
+  content: "";
+  height: 16px;
+  left: -7px;
+  position: absolute;
+  top: 9px;
+  transform: rotate(-28deg);
+  width: 5px;
+}
+
+.five p {
+  font-size: 2rem;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+.idea-3 strong {
+  border-radius: 3px;
+  display: inline-block;
+  padding: 3px 5px;
+}
+
+.five .idea-5 {
+  font-family: 'Pacifico', cursive;
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.idea-5 span, .idea-6 span, .wish-hbd span {
+  display: inline-block;
+}
+
+.idea-6 span{
+  font-size: 15rem;
+}
+
+
+.six {
+  position: relative;
+  top: 10vh;
+  z-index: 1;
+}
+
+.birthday-photo-wrap {
+  display: inline-block;
+  position: relative;
+}
+
+.profile-picture {
+  display: inline-block;
+  height: 350px;
+  max-width: 100%;
+  /* height: auto; */
+}
+
+.six .hat {
+  height: auto;
+  left: 23%;
+  position: absolute;
+  /* transform: scale(0.1); */
+  top: -23%;
+  transform: rotate(-13deg);
+  width: 92px;
+}
+
+.memories {
+  padding: 0 18px;
+}
+
+.memory-title {
+  font-size: 1.7rem;
+  font-weight: lighter;
+  margin: 0 auto 24px;
+}
+
+.memory-gallery {
+  align-items: center;
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 860px;
+}
+
+.memory-gallery figure {
+  margin: 0;
+  width: min(27vw, 240px);
+}
+
+.memory-gallery img {
+  aspect-ratio: 3 / 4;
+  border: 4px solid #fff;
+  border-radius: 8px;
+  box-shadow: 0 16px 35px rgba(31, 83, 104, 0.22);
+  cursor: zoom-in;
+  max-height: 380px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.memory-gallery figcaption {
+  color: #5f4f2f;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.memory-gallery figure:nth-child(1) img {
+  transform: rotate(-6deg);
+}
+
+.memory-gallery figure:nth-child(2) img {
+  transform: translateY(-12px);
+}
+
+.memory-gallery figure:nth-child(3) img {
+  transform: rotate(6deg);
+}
+
+.baloons img {
+  display: inline-block;
+  position: absolute;
+}
+
+.baloons img:nth-child(even) {
+  left: -10%;
+}
+
+.baloons img:nth-child(odd) {
+  right: -10%;
+}
+
+.baloons img:nth-child(3n + 0) {
+  left: 30%;
+}
+
+.seven, .eight {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+.eight {
+  pointer-events: none;
+  z-index: 2;
+}
+
+.celebration-pop {
+  color: #f48aa8;
+  font-size: 2.4rem;
+  left: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.4);
+}
+
+.celebration-pop.dot {
+  background: #f7d154;
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+}
+
+.celebration-pop.star {
+  color: #2f9b8f;
+  font-size: 2.1rem;
+}
+
+.celebration-pop:nth-child(1) { left: 18vw; top: 22vh; }
+.celebration-pop:nth-child(2) { left: 36vw; top: 18vh; }
+.celebration-pop:nth-child(3) { left: 61vw; top: 20vh; }
+.celebration-pop:nth-child(4) { left: 79vw; top: 34vh; }
+.celebration-pop:nth-child(5) { left: 22vw; top: 52vh; }
+.celebration-pop:nth-child(6) { left: 48vw; top: 46vh; }
+.celebration-pop:nth-child(7) { left: 73vw; top: 61vh; }
+.celebration-pop:nth-child(8) { left: 34vw; top: 76vh; }
+.celebration-pop:nth-child(9) { left: 59vw; top: 80vh; }
+
+.wish-hbd {
+  font-family: 'Pacifico', cursive;
+  font-size: 3em;
+  font-weight: 400;
+  margin: 0;
+}
+
+.wish h5 {
+  font-size: 2rem;
+  font-weight: lighter;
+  margin: 10px 0 0;
+}
+
+.nine p {
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+.letter-btn {
+  font-size: 1rem;
+  margin: 8px 0 12px;
+}
+
+.secret-area {
+  margin: 4px auto 14px;
+  max-width: 720px;
+  padding: 0 16px;
+}
+
+.secret-title {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.secret-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.secret-btn {
+  background: #f7d154;
+  border: 0;
+  border-radius: 6px;
+  color: #392d0d;
+  cursor: pointer;
+  font: inherit;
+  min-height: 40px;
+  padding: 9px 14px;
+}
+
+.secret-btn:nth-child(2) {
+  background: #f48aa8;
+  color: #fff;
+}
+
+.secret-btn:nth-child(3) {
+  background: #2f9b8f;
+  color: #fff;
+}
+
+.secret-message {
+  color: #1f5368;
+  font-size: 1rem !important;
+  margin-top: 10px !important;
+}
+
+.tease-game {
+  margin: 8px auto 14px;
+  min-height: 92px;
+  position: relative;
+  width: min(92vw, 680px);
+}
+
+.tease-btn {
+  background: #d93c7a;
+  border: 0;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  left: 50%;
+  min-height: 42px;
+  padding: 10px 16px;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  transition: left 0.22s ease, top 0.22s ease, transform 0.18s ease, background 0.2s ease;
+  white-space: nowrap;
+}
+
+.tease-btn.is-ready {
+  background: #2f9b8f;
+  transform: translateX(-50%) scale(1.05);
+}
+
+.tease-message {
+  color: #5f4f2f;
+  font-size: 1rem !important;
+  margin: 54px auto 0 !important;
+}
+
+.hidden-letter {
+  display: none;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(244, 138, 168, 0.4);
+  border-radius: 8px;
+  box-shadow: 0 18px 45px rgba(31, 83, 104, 0.16);
+  margin: 4px auto 18px;
+  max-width: 780px;
+  padding: 26px 30px;
+}
+
+.hidden-letter.is-visible {
+  display: block;
+}
+
+.hidden-letter p {
+  font-size: 1.65rem;
+  line-height: 1.6;
+  margin: 0 0 16px;
+}
+
+.final-click {
+  color: #1f8fbf;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.final-reveal {
+  display: none;
+}
+
+.final-reveal.is-visible {
+  display: block;
+}
+
+#replay {
+  cursor: pointer;
+  z-index: 3;
+}
+
+.last-smile {
+  pointer-events: none;
+}
+
+.sparkle-dot {
+  background: #f7d154;
+  border-radius: 50%;
+  height: 10px;
+  left: 50%;
+  pointer-events: none;
+  position: fixed;
+  top: 50%;
+  width: 10px;
+  z-index: 30;
+}
+
+.sparkle-dot:nth-child(3n) {
+  background: #f48aa8;
+}
+
+.sparkle-dot:nth-child(4n) {
+  background: #2f9b8f;
+}
+
+.click-heart {
+  color: #f48aa8;
+  font-family: 'Pacifico', cursive;
+  font-size: 1.4rem;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  z-index: 45;
+}
+
+.click-heart:nth-child(3n) {
+  color: #f7d154;
+}
+
+.click-heart:nth-child(4n) {
+  color: #2f9b8f;
+}
+
+.final-celebration {
+  align-items: center;
+  background: radial-gradient(circle at top, rgba(255, 247, 214, 0.97), rgba(255, 214, 231, 0.97) 45%, rgba(213, 244, 255, 0.98));
+  display: flex;
+  flex-direction: column;
+  inset: 0;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  transform: scale(0.96);
+  visibility: hidden;
+  z-index: 25;
+}
+
+.final-celebration.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  visibility: visible;
+}
+
+.final-photo-stack {
+  height: min(52vh, 430px);
+  position: relative;
+  width: min(82vw, 580px);
+}
+
+.final-photo-stack img {
+  aspect-ratio: 3 / 4;
+  border: 5px solid #fff;
+  border-radius: 8px;
+  box-shadow: 0 22px 55px rgba(31, 83, 104, 0.28);
+  cursor: zoom-in;
+  left: 50%;
+  max-height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.2);
+  width: min(40vw, 230px);
+}
+
+.final-celebration.is-visible .final-photo-stack img:nth-child(1) {
+  animation: finalPhotoLeft 1.1s ease forwards;
+}
+
+.final-celebration.is-visible .final-photo-stack img:nth-child(2) {
+  animation: finalPhotoCenter 1.1s 0.15s ease forwards;
+}
+
+.final-celebration.is-visible .final-photo-stack img:nth-child(3) {
+  animation: finalPhotoRight 1.1s 0.3s ease forwards;
+}
+
+.final-celebration p {
+  color: #222;
+  font-family: 'Pacifico', cursive;
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 26px 18px 0;
+  max-width: 720px;
+}
+
+.photo-modal {
+  align-items: center;
+  background: rgba(15, 25, 32, 0.88);
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  opacity: 0;
+  padding: 20px;
+  pointer-events: none;
+  position: fixed;
+  transition: opacity 0.22s ease;
+  visibility: hidden;
+  z-index: 40;
+}
+
+.photo-modal.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.photo-modal img {
+  border: 5px solid #fff;
+  border-radius: 8px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+  max-height: 88vh;
+  max-width: 92vw;
+  object-fit: contain;
+}
+
+.photo-modal-close {
+  background: #fff;
+  border: 0;
+  border-radius: 50%;
+  color: #222;
+  cursor: pointer;
+  font: inherit;
+  height: 42px;
+  position: fixed;
+  right: 18px;
+  top: 18px;
+  width: 42px;
+  z-index: 41;
+}
+
+@keyframes finalPhotoLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.2) rotate(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-102%, -45%) scale(1) rotate(-11deg);
+  }
+}
+
+@keyframes finalPhotoCenter {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.2);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -52%) scale(1.08);
+  }
+}
+
+@keyframes finalPhotoRight {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.2) rotate(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(2%, -45%) scale(1) rotate(11deg);
+  }
+}
+
+/* Media Queries */
+@media screen and (max-height: 1000px) {
+  .six .hat {
+    left: 23%;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .six .hat {
+    left: 22%;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .six .hat {
+    left: 21%;
+  }
+}
+
+@media screen and (max-height: 850px) and (max-width: 450px) {
+  .six .hat {
+    left: 21%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 100vw;
+  }
+
+  .container > div {
+    top: 16vh;
+  }
+
+  .one {
+    font-size: 2.7rem;
+    line-height: 1.15;
+  }
+
+  .two {
+    font-size: 1rem;
+    padding: 0 18px;
+  }
+
+  .three {
+    font-size: 2rem;
+    padding: 0 18px;
+  }
+
+  .five p {
+    font-size: 1.45rem;
+    padding: 0 18px;
+  }
+
+  .four .text-box {
+    font-size: 0.95rem;
+    max-height: 42vh;
+    overflow: auto;
+  }
+
+  .text-box .fake-btn {
+    bottom: -38px;
+    right: 5px;
+  }
+
+  .idea-5 span {
+    display: block;
+  }
+
+  .idea-6 span {
+    font-size: 7rem;
+  }
+
+  .six {
+    top: 8vh;
+  }
+
+  .profile-picture {
+    height: auto;
+    max-height: 320px;
+    width: min(78vw, 320px);
+  }
+
+  .six .hat {
+    /* top: -20px; */
+    left: 21%;
+    top: -20%;
+    width: 70px;
+  }
+
+  .wish-hbd {
+    font-size: 2.2em;
+  }
+
+  .wish h5 {
+    font-size: 1.4rem;
+  }
+
+  .nine p {
+    font-size: 1.25rem;
+    font-weight: lighter;
+    margin: 10px auto;
+    max-width: 92vw;
+  }
+
+  .memory-title {
+    font-size: 1.15rem;
+    margin-bottom: 14px;
+  }
+
+  .memory-gallery {
+    gap: 6px;
+  }
+
+  .memory-gallery figure {
+    width: 30vw;
+  }
+
+  .memory-gallery img {
+    border-width: 3px;
+    max-height: 260px;
+  }
+
+  .memory-gallery figcaption {
+    font-size: 0.78rem;
+    margin-top: 8px;
+  }
+
+  .secret-buttons {
+    gap: 6px;
+  }
+
+  .secret-btn {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+
+  .tease-game {
+    min-height: 86px;
+  }
+
+  .tease-btn {
+    font-size: 0.9rem;
+    padding: 9px 12px;
+  }
+
+  .tease-message {
+    font-size: 0.9rem !important;
+  }
+
+  .hidden-letter p {
+    font-size: 1.08rem;
+    line-height: 1.45;
+  }
+
+  .hidden-letter {
+    margin-left: 12px;
+    margin-right: 12px;
+    padding: 18px 16px;
+  }
+
+  .final-photo-stack {
+    height: 48vh;
+    width: 94vw;
+  }
+
+  .final-photo-stack img {
+    width: 35vw;
+  }
+
+  .final-celebration p {
+    font-size: 1.25rem;
+  }
+
+  .start-panel h1 {
+    font-size: 2.4rem;
+  }
+
+  .start-actions {
+    flex-direction: column;
+  }
+
+  .birthday-nav {
+    left: 10px;
+    top: 10px;
+  }
+
+  .birthday-nav button {
+    min-height: 36px;
+    padding: 7px 10px;
+  }
+}

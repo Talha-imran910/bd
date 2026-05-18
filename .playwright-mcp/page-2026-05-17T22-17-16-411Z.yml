@@ -1,0 +1,19 @@
+- generic [ref=e9]:
+  - text: Happy birthday, DUMBOO. This year became brighter because you were in it. I hope today gives you the same warmth, joy, and love that you bring into my life.
+  - generic [ref=e11]:
+    - img [ref=e12]
+    - img [ref=e14]
+    - img [ref=e16]
+    - img [ref=e18]
+    - img [ref=e20]
+    - img [ref=e22]
+    - img [ref=e24]
+    - img [ref=e26]
+    - img [ref=e28]
+  - generic [ref=e30]:
+    - paragraph [ref=e31]: Okay, now come back and tell me if you liked it.
+    - generic [ref=e34]:
+      - paragraph [ref=e35]: "I do not say this perfectly every time, but I mean it fully: you matter to me, and I am really grateful for you."
+      - paragraph [ref=e36] [cursor=pointer]: One more thing...
+    - paragraph [ref=e33] [cursor=pointer]: Click here if you want to watch it again.
+    - paragraph: :)

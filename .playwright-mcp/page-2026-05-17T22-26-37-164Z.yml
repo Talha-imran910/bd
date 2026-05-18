@@ -1,0 +1,27 @@
+- generic [ref=e9]:
+  - text: Happy birthday, DUMBOO. This year became brighter because you were in it. I hope today gives you the same warmth, joy, and love that you bring into my life.
+  - generic [ref=e14]:
+    - img [ref=e28]
+    - img [ref=e30]
+    - img [ref=e32]
+    - img [ref=e34]
+    - img [ref=e36]
+    - img [ref=e38]
+    - img [ref=e40]
+    - img [ref=e42]
+    - img [ref=e44]
+  - generic [ref=e46]:
+    - paragraph [ref=e15]: Okay, now come back and tell me if you liked it.
+    - button "Open the hidden letter" [ref=e16] [cursor=pointer]
+    - generic [ref=e17]:
+      - paragraph [ref=e18]: Secret buttons
+      - generic [ref=e19]:
+        - button "Memory" [ref=e20] [cursor=pointer]
+        - button "Sparkle" [ref=e21] [cursor=pointer]
+        - button "Finale" [ref=e22] [cursor=pointer]
+      - paragraph [ref=e23]: Try them after opening the letter.
+    - generic [ref=e24]:
+      - button "You got me" [active] [ref=e47] [cursor=pointer]
+      - paragraph [ref=e26]: Caught it. Just like that, you caught another reason why you are special.
+    - paragraph [ref=e27] [cursor=pointer]: Click here if you want to watch it again.
+    - paragraph: :)

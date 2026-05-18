@@ -1,0 +1,30 @@
+- generic [active] [ref=e1]:
+  - generic "Birthday surprise controls" [ref=e9]:
+    - button "Back" [ref=e10] [cursor=pointer]
+    - button "Start" [ref=e11] [cursor=pointer]
+  - generic [ref=e12]:
+    - generic [ref=e13]:
+      - heading "Hi DUMBOO :)" [level=1] [ref=e14]
+      - paragraph [ref=e15]: I made something small, just for you.
+    - generic:
+      - generic: ♥
+      - generic: ★
+      - generic: ♥
+      - generic: ★
+      - generic: ♥
+      - generic: ★
+    - paragraph [ref=e17]: Okay, now come back and tell me if you liked it.
+    - button "Open the hidden letter" [ref=e18] [cursor=pointer]
+    - generic [ref=e19]:
+      - paragraph [ref=e20]: Secret buttons
+      - generic [ref=e21]:
+        - button "Memory" [ref=e22] [cursor=pointer]
+        - button "Sparkle" [ref=e23] [cursor=pointer]
+        - button "Finale" [ref=e24] [cursor=pointer]
+      - paragraph [ref=e25]: Try them after opening the letter.
+    - generic [ref=e26]:
+      - button "Click me if you can" [ref=e27] [cursor=pointer]
+      - paragraph [ref=e28]: This one is a little dramatic.
+    - paragraph [ref=e29] [cursor=pointer]: Click here if you want to watch it again.
+    - paragraph: :)
+  - generic: ✦
